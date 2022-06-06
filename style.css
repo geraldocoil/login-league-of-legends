@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap'); /*Fonte*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca' , sans-serif;
+
+}
+/*Variaveis de cores :*/
+:root {
+    --white : #fff;
+    --whitesmoke: #f9f9f9;
+    --light-grey:#ECECEC;
+    --grey:#c4c4c4;
+    --medium-grey:#a7a7a7;
+    --deep-grey:#343434;
+    --black:#000;
+    --blue:#1255ac;
+    --red:#cf2121;
+}
+
+main{
+    display: flex;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: clamp(25px,8%,50px);
+    justify-content: space-between;/*clamp(valor min , valor desejado, valor max)-> funcao para limitar o tamanho do padding em relacao ao tamanho da tela */
+
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-logo {
+    width: 100px;
+    margin-bottom: 80px;
+}
+
+.login-titulo{
+    color: var(--deep-grey);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-label{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.input{
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: var(--light-grey);
+    border: 2px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    outline: none;
+    font-size:0.9em;
+    font-weight: 600;
+    color: var(--deep-grey);
+    
+}
+.login-label span{
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--medium-grey);
+    margin: 15px;
+    cursor: text;
+    transition: all 200ms ease;
+}
+
+.input:focus { /*configuracoes quando o input estiver selecionado*/
+    background-color: var(--whitesmoke);
+    transition: 5ms;
+    border: 2px solid var(--deep-grey);
+}
+.login-label .span-ativo{/*cpmfiguracoes do span quando o input tiver selecionado*/
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+/*Icones de login*/
+.login-icons img {
+    width: 15px;
+}
+.login-icons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+.icone-botao {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.login-icons .icone-botao:nth-child(1){/*cor da 1 img*/
+    background-color: var(--blue);
+}
+.login-icons .icone-botao:nth-child(2){/*cor da 2 img*/
+    background-color: var(--light-grey);
+}
+.login-icons .icone-botao:nth-child(3){/*cor da 3 im*/
+    background-color: var(--black);
+}
+
+.login-label-checkbox {
+    width: 100%;
+    margin: 20px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.input-checkbox {/*dimensoes checkbox*/
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-grey);
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.input-checkbox:checked{
+    background-color: var(--red);
+}
+.input-checkbox:checked::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid var(--white);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.login-botao {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--medium-grey);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+.login-botao img {
+    width: 20px;
+}
+
+.login-botao:disable {
+    cursor: auto;
+    background-color: black;
+    border: 2px solid var(--light-grey);
+}
+.login-botao:disable img {
+  background-color: #cf2121; 
+}
+
+.login-link {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--medium-grey);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.wallpaper {
+    width: 100%;
+    background-image: url(imgs/lucian.gif);
+    background-size: cover;
+    background-position: center; /*centreliza a imagem*/
+    flex: 1;  /*ocupará somente seu espaco*/
+}
